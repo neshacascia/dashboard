@@ -8,7 +8,109 @@
     <title>Personal Dashboard</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <nav>
+      <div class="current-location">
+        <i class="fa-solid fa-location-dot"></i>
+        <span id="location"></span>
+      </div>
+
+      <div class="metric">
+        <button id="celsius" type="button">°C</button>
+        <button id="fahrenheit" type="button">°F</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="left-container">
+        <div class="top">
+          <div id="day-0" class="current-weather">
+            <div class="date-time">
+              <span id="date"></span>
+              <span id="time"></span>
+            </div>
+  
+            <div class="weather">
+              <img id="weather-icon" src="" alt="" />
+              <span id="current-temp"></span>
+            </div>
+  
+            <span id="description"></span>
+  
+            <div class="border"></div>
+  
+            <div class="weather-info">
+              <h3>Feels like:</h3>
+              <span id="feels-temp"></span>
+            </div>
+          </div>
+  
+          <div class="pomodoro-container">
+            <div class="timer-modes">
+              <button data-mode="pomodoro" id="work" class="mode-btns">work</button>
+              <button data-mode="break" id="break" class="mode-btns">break</button>
+
+              <button type="button" class="timer-btns">
+                <i data-mode="start" id="start-timer" class="fa-solid fa-play"></i>
+                <i data-mode="resume" id="resume-timer" class="fa-solid fa-play hidden"></i>
+                <i data-mode="pause" id="pause-timer" class="fa-solid fa-pause hidden"></i>
+                
+              </button>
+            </div>
+
+            <div class="timer">
+              <div class="circle">
+                <div class="time">
+                  <span id="minutes"></span>
+                  <span>:</span>
+                  <span id="seconds"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="details">
+            <div class="wind-container">
+              <i class="fa-solid fa-wind"></i>
+              <h3>Wind Status</h3>
+              <span id="wind"></span>
+            </div>
+            <div class="humidity-container">
+              <i class="fa-solid fa-droplet"></i>
+              <h3>Humidity</h3>
+              <span id="humidity"></span>
+            </div>
+          </div>
+
+          <div class="quotes-container">
+          </div>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="to-do-container">
+          <form class="to-do-form">
+            <div class="checkbox-container">
+              <button class="checkbox" type="button"></button>
+            </div>
+            <input class="to-do-input" type="text" placeholder="Create a new to do..."
+            />
+          </form>
+
+          <ul id="to-do-list"></ul>
+
+          <div class="button-container">
+            <span id="message"></span>
+            <div class="display-buttons">
+              <span id="items-left">0 items left</span>
+              <!-- <button id="clear-completed">Clear Completed</button> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+    </div>
   </body>
 </html>
